@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — drDarsoBot</title>
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="prototype.css">
+</head>
+<body class="px" data-mode="clean">
+<header class="px-top"><div class="px-brand">drDarsoBot<small>Admin Console</small></div><nav><a href="dashboard.html" class="on">Dashboard</a><a href="live-chats.html" class="">Live Chats</a><a href="prompt.html" class="">Prompt &amp; Info RS</a><a href="coba-bot.html" class="">Coba Bot</a><a href="perangkat.html" class="">Perangkat</a><a href="log.html" class="">Log</a><a href="pengguna.html" class="">Pengguna</a></nav>
+  <span class="px-user">Sari</span><a href="#">Ganti Password</a><a href="index.html">Logout</a></header>
+<div class="px-main">
+  <div id="frame-opt1" class="px-frame clean"><div class="browser-content">
+<div class="db-app">
+
+<div class="db-body">
+
+<main class="db-main scroll">
+  <div class="toolbar"><div class="seg">
+<input type="radio" name="r1" id="r1a" checked hidden><label for="r1a">Hari ini</label>
+<input type="radio" name="r1" id="r1b" hidden><label for="r1b">7 hari</label>
+<input type="radio" name="r1" id="r1c" hidden><label for="r1c">30 hari</label></div><select class="sel"><option>Semua perangkat</option><option>Info Publik</option><option>Hotline IGD</option><option>CS Poli</option></select><span class="muted small push">Diperbarui 10:45 · otomatis tiap 30 dtk</span><span class="wf-marker">1</span></div>
+  <div class="stats"><div class="stat"><div class="stat-l">Pesan masuk</div><div class="stat-v">214</div><div class="stat-s">+12% vs Jumat lalu</div></div><div class="stat"><div class="stat-l">Dijawab bot</div><div class="stat-v">198</div><div class="stat-s">92,5%</div></div><div class="stat"><div class="stat-l">Dibalas operator</div><div class="stat-v">9</div><div class="stat-s">&nbsp;</div></div><div class="stat"><div class="stat-l">Takeover aktif</div><div class="stat-v">2</div><div class="stat-s">Sari, Budi</div></div><div class="stat bad"><div class="stat-l">Error</div><div class="stat-v">4</div><div class="stat-s">3 SIMRS · 1 LLM</div></div><span class="wf-marker">2</span></div>
+  <div class="grid2">
+    <div class="card"><div class="card-h">Pesan per hari</div><div class="bars"><div class="bcol"><span class="bval">128</span><span class="bar" style="height:36%"></span><span class="blab">Sab</span></div><div class="bcol"><span class="bval">96</span><span class="bar" style="height:27%"></span><span class="blab">Min</span></div><div class="bcol"><span class="bval">352</span><span class="bar" style="height:100%"></span><span class="blab">Sen</span></div><div class="bcol"><span class="bval">318</span><span class="bar" style="height:90%"></span><span class="blab">Sel</span></div><div class="bcol"><span class="bval">301</span><span class="bar" style="height:86%"></span><span class="blab">Rab</span></div><div class="bcol"><span class="bval">287</span><span class="bar" style="height:82%"></span><span class="blab">Kam</span></div><div class="bcol today"><span class="bval">214</span><span class="bar" style="height:61%"></span><span class="blab">Jum</span></div></div></div>
+    <div class="card"><div class="card-h">Pemakaian tool (hari ini)</div><div class="hrow"><span class="hlab mono">get_jadwal_dokter</span><span class="htrack"><span class="hfill" style="width:100%"></span></span><span class="hval">92</span></div><div class="hrow"><span class="hlab mono">get_info_rs</span><span class="htrack"><span class="hfill" style="width:66%"></span></span><span class="hval">61</span></div><div class="hrow"><span class="hlab mono">get_ketersediaan_kamar</span><span class="htrack"><span class="hfill" style="width:41%"></span></span><span class="hval">38</span></div><div class="hrow"><span class="hlab mono">tanpa tool</span><span class="htrack"><span class="hfill" style="width:25%"></span></span><span class="hval">23</span></div><div class="kv"><span>Rata-rata latency</span><b>2,1 dtk</b></div></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><div class="card-h">Status perangkat <span class="wf-marker">3</span></div><table class="tbl"><tr><td><b>Info Publik</b><br><span class="muted small">0811-3500-0001</span></td><td><span class="dot ok"></span>Terhubung</td><td class="muted small">pesan terakhir 10:44</td><td></td></tr><tr><td><b>Hotline IGD</b><br><span class="muted small">0811-3500-0002</span></td><td><span class="dot ok"></span>Terhubung</td><td class="muted small">pesan terakhir 10:42</td><td></td></tr><tr><td><b>CS Poli</b><br><span class="muted small">0811-3500-0003</span></td><td><span class="dot bad"></span><b>Terputus</b></td><td class="muted small">terputus sejak 10:12</td><td><a href="perangkat.html" class="btn sm primary">Hubungkan</a></td></tr></table></div>
+    <div class="card"><div class="card-h">Error terakhir <a href="log.html" class="push small">Lihat di Log →</a></div><table class="tbl"><tr><td class="mono">10:38</td><td><span class="badge">SIMRS</span></td><td>Timeout 5 dtk · get_ketersediaan_kamar</td><td class="muted small">0857-****-2231</td></tr><tr><td class="mono">10:21</td><td><span class="badge">SIMRS</span></td><td>Timeout 5 dtk · get_jadwal_dokter</td><td class="muted small">0812-****-7710</td></tr><tr><td class="mono">10:05</td><td><span class="badge">SIMRS</span></td><td>Timeout 5 dtk · get_jadwal_dokter</td><td class="muted small">0878-****-9012</td></tr></table></div>
+  </div>
+</main>
+</div></div>
+  </div></div>
+</div>
+</body>
+</html>

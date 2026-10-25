@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt &amp; Info RS — drDarsoBot</title>
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="prototype.css">
+</head>
+<body class="px" data-mode="clean">
+<header class="px-top"><div class="px-brand">drDarsoBot<small>Admin Console</small></div><nav><a href="dashboard.html" class="">Dashboard</a><a href="live-chats.html" class="">Live Chats</a><a href="prompt.html" class="on">Prompt &amp; Info RS</a><a href="coba-bot.html" class="">Coba Bot</a><a href="perangkat.html" class="">Perangkat</a><a href="log.html" class="">Log</a><a href="pengguna.html" class="">Pengguna</a></nav>
+  <span class="px-user">Sari</span><a href="#">Ganti Password</a><a href="index.html">Logout</a></header>
+<div class="px-main">
+  <div id="frame-opt1" class="px-frame clean"><div class="browser-content">
+<div class="pr-app">
+
+<div class="pr-body">
+
+<section class="pane main">
+  <input type="radio" name="f1" id="f1a" class="ft ft-a" hidden checked><input type="radio" name="f1" id="f1b" class="ft ft-b" hidden>
+<div class="ftabs"><label for="f1a" class="la">System Prompt <span class="fname">prompts/system.md</span></label><label for="f1b" class="lb">Info RS <span class="fname">kb/info_rs.md</span></label><span class="wf-marker">1</span></div>
+  <div class="fpanel fp-a">
+    <textarea class="editor" spellcheck="false"># Persona
+Kamu adalah drDarsoBot, petugas informasi RSUD dr. Darsono Pacitan.
+Gunakan bahasa Indonesia yang santun: sapa "Bapak/Ibu", pakai "nggih" dan "matur nuwun" secukupnya.
+
+# Aturan
+- Jadwal dokter HANYA dari hasil get_jadwal_dokter.
+- Ketersediaan kamar HANYA dari hasil get_ketersediaan_kamar.
+- Informasi umum RS ambil dari get_info_rs.
+- Jangan memakai menu angka ("ketik 1 untuk ...").
+
+# Batasan
+- Jangan menebak penyakit atau menyarankan obat.
+- Transaksi (booking, pendaftaran, pembayaran) arahkan ke loket.
+- Bila data tidak ada, sampaikan belum tersedia.
+
+# Contoh
+Pasien: Dokter anak hari Senin siapa?
+Bot: Nggih Bapak/Ibu, poli anak hari Senin: {nama_dokter}, pukul {jam}.</textarea>
+    <div class="statusline"><span>Terakhir disimpan 23 Okt 10:15 oleh Sari · 1.240 karakter</span><span class="push"></span><a href="#" class="btn ghost">Batal</a><a href="#" class="btn primary">Simpan</a><span class="wf-marker">2</span></div>
+  </div>
+  <div class="fpanel fp-b">
+    <textarea class="editor" spellcheck="false">## Profil
+RSUD dr. Darsono adalah rumah sakit milik Pemkab Pacitan ...
+
+## Alamat & Kontak
+Jl. A. Yani No. 51, Pacitan. Telp (0357) 881410.
+
+## Jam Besuk
+Pukul 11.00–13.00 dan 17.00–19.00 WIB. Maksimal 2 pengunjung.
+
+## Pendaftaran Rawat Jalan
+Loket buka Senin–Kamis 07.00–12.00, Jumat 07.00–10.30 ...
+
+## BPJS
+Bawa kartu BPJS, KTP, dan surat rujukan FKTP ...
+
+## IGD
+IGD 24 jam, pintu masuk barat. Kasus gawat darurat tanpa rujukan.</textarea>
+    <div class="statusline"><span>Terakhir disimpan 22 Okt 15:30 oleh Budi · 8 topik</span><span class="push"></span><a href="#" class="btn ghost">Batal</a><a href="#" class="btn primary">Simpan</a></div>
+  </div>
+</section>
+<aside class="pane-side"><div class="side-title">Cadangan <span class="wf-marker">3</span></div><div class="bk"><div class="bk-top"><b>23 Okt 2026, 10:15</b></div><div class="muted small">Sari · system.20261023-101512.bak</div>
+<div class="bk-act"><a href="#" class="btn sm ghost">Lihat</a><a href="#" class="btn sm ghost">Pulihkan</a></div></div><div class="bk"><div class="bk-top"><b>22 Okt 2026, 15:30</b></div><div class="muted small">Budi · system.20261022-153040.bak</div>
+<div class="bk-act"><a href="#" class="btn sm ghost">Lihat</a><a href="#" class="btn sm ghost">Pulihkan</a></div></div><div class="bk"><div class="bk-top"><b>20 Okt 2026, 09:02</b></div><div class="muted small">Sari · system.20261020-090211.bak</div>
+<div class="bk-act"><a href="#" class="btn sm ghost">Lihat</a><a href="#" class="btn sm ghost">Pulihkan</a></div></div><a href="#" class="more">Tampilkan 9 lainnya</a></aside>
+</div></div>
+  </div></div>
+</div>
+</body>
+</html>

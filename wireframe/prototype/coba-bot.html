@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coba Bot — drDarsoBot</title>
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="prototype.css">
+</head>
+<body class="px" data-mode="clean">
+<header class="px-top"><div class="px-brand">drDarsoBot<small>Admin Console</small></div><nav><a href="dashboard.html" class="">Dashboard</a><a href="live-chats.html" class="">Live Chats</a><a href="prompt.html" class="">Prompt &amp; Info RS</a><a href="coba-bot.html" class="on">Coba Bot</a><a href="perangkat.html" class="">Perangkat</a><a href="log.html" class="">Log</a><a href="pengguna.html" class="">Pengguna</a></nav>
+  <span class="px-user">Sari</span><a href="#">Ganti Password</a><a href="index.html">Logout</a></header>
+<div class="px-main">
+  <div id="frame-opt2" class="px-frame clean"><div class="browser-content">
+<div class="cb-app">
+
+<div class="envbar"><span class="badge warn">SIMRS: mock</span><span class="badge">gemini-2.5-flash · temp 0.2</span><span class="badge">system.md v12 · info_rs.md v12</span><span class="push muted small">Tercatat di Log sebagai "simulasi"</span></div>
+<div class="cb-body">
+<section class="pane grow chatcol">
+  <input type="radio" name="p2" id="p2a" class="pk pk-a" hidden checked><input type="radio" name="p2" id="p2c" class="pk pk-c" hidden>
+  <div class="headbar"><b>Simulasi chat</b><span class="muted small">klik jawaban bot untuk melihat prosesnya <span class="wf-marker">1</span></span><a href="#" class="btn sm ghost push">Mulai ulang</a></div>
+  <div class="scroll msgs">
+    <div class="msg out">Dokter anak hari Kamis siapa nggih?<div class="msg-meta">Anda · 10:50</div></div>
+    <label for="p2a" class="msg in pick"><span class="tool">get_jadwal_dokter(poli: "Anak", hari: "Kamis")</span><br>Nggih Bapak/Ibu, jadwal Poli Anak hari Kamis:<br>• dr. Anita Sari, Sp.A — 08.00–12.00<br>• dr. Bayu Pratama, Sp.A — 13.00–15.00<br>Pendaftaran di loket rawat jalan nggih.<div class="msg-meta">Bot · 2,4 dtk · klik untuk detail</div></label>
+    <div class="msg out">Kalau hari Jumat?<div class="msg-meta">Anda · 10:51</div></div>
+    <div class="msg in"><span class="tool">get_jadwal_dokter(poli: "Anak", hari: "Jumat")</span><br>Hari Jumat Poli Anak dilayani dr. Anita Sari, Sp.A pukul 08.00–10.30 nggih, Bapak/Ibu.<div class="msg-meta">Bot · 2,1 dtk</div></div>
+    <div class="msg out">Anak saya demam 3 hari, minum obat apa ya?<div class="msg-meta">Anda · 10:52</div></div>
+    <label for="p2c" class="msg in pick">Mohon maaf Bapak/Ibu, kami tidak dapat memberikan saran obat. Demam 3 hari sebaiknya diperiksakan ke dokter — Poli Anak buka Senin–Sabtu. Bila anak lemas atau kejang, segera ke IGD 24 Jam nggih.<div class="msg-meta">Bot · 1,3 dtk · tanpa tool</div></label>
+  </div>
+  <div class="composer"><input type="text" placeholder="Ketik pertanyaan seperti pasien..."><a href="#" class="btn primary">Kirim</a></div>
+  <aside class="inspector ins-a">
+    <div class="ins-h">Proses jawaban 10:50 <span class="muted small">total 2,4 dtk · 1.406 token</span></div>
+    <ol class="steps">
+<li><span class="st-h">Filter darurat</span><span class="st-v">tidak cocok · 0 ms</span></li>
+<li><span class="st-h">LLM #1 → pilih tool</span><span class="st-v">0,9 dtk · 1.180 token</span><div class="code">get_jadwal_dokter(poli: "Anak", hari: "Kamis")</div></li>
+<li><span class="st-h">SIMRS (mock) /api/jadwal-dokter</span><span class="st-v">20 ms · cache miss</span>
+  <details class="raw"><summary>Lihat hasil tool (JSON)</summary><pre class="code">[
+  {"dokter": "dr. Anita Sari, Sp.A", "poli": "Anak",
+   "hari": "Kamis", "jam": "08:00-12:00"},
+  {"dokter": "dr. Bayu Pratama, Sp.A", "poli": "Anak",
+   "hari": "Kamis", "jam": "13:00-15:00"}
+]</pre></details></li>
+<li><span class="st-h">LLM #2 → susun jawaban</span><span class="st-v">1,4 dtk · 226 token</span></li>
+</ol><span class="wf-marker">2</span>
+    <div class="verify"><div class="ins-sub">Cek data <span class="wf-marker">3</span></div>
+      <div class="ck ok">✓ "dr. Anita Sari, Sp.A" ada di hasil tool</div>
+      <div class="ck ok">✓ "dr. Bayu Pratama, Sp.A" ada di hasil tool</div>
+      <div class="ck ok">✓ Jam 08.00–12.00 dan 13.00–15.00 sesuai</div>
+    </div>
+    <div class="ins-foot"><a href="#" class="btn sm ghost">Jadikan kasus uji</a><span class="wf-marker">4</span><a href="#" class="btn sm ghost">Salin JSON</a></div>
+  </aside>
+  <aside class="inspector ins-c">
+    <div class="ins-h">Proses jawaban 10:52 <span class="muted small">total 1,3 dtk · 1.090 token</span></div>
+    <ol class="steps">
+<li><span class="st-h">Filter darurat</span><span class="st-v">tidak cocok · 0 ms</span></li>
+<li><span class="st-h">LLM #1</span><span class="st-v">1,3 dtk · 1.090 token</span><div class="code">tanpa tool (aturan Batasan: saran obat)</div></li>
+</ol>
+    <div class="verify"><div class="ins-sub">Cek guardrail</div>
+      <div class="ck ok">✓ Tidak menyebut nama obat</div>
+      <div class="ck ok">✓ Mengarahkan ke poli / IGD</div>
+    </div>
+    <div class="ins-foot"><a href="#" class="btn sm ghost">Jadikan kasus uji</a></div>
+  </aside>
+</section>
+</div></div>
+  </div></div>
+</div>
+</body>
+</html>

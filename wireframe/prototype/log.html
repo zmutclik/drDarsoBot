@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log — drDarsoBot</title>
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="prototype.css">
+</head>
+<body class="px" data-mode="clean">
+<header class="px-top"><div class="px-brand">drDarsoBot<small>Admin Console</small></div><nav><a href="dashboard.html" class="">Dashboard</a><a href="live-chats.html" class="">Live Chats</a><a href="prompt.html" class="">Prompt &amp; Info RS</a><a href="coba-bot.html" class="">Coba Bot</a><a href="perangkat.html" class="">Perangkat</a><a href="log.html" class="on">Log</a><a href="pengguna.html" class="">Pengguna</a></nav>
+  <span class="px-user">Sari</span><a href="#">Ganti Password</a><a href="index.html">Logout</a></header>
+<div class="px-main">
+  <div id="frame-opt1" class="px-frame clean"><div class="browser-content">
+<div class="lg-app">
+
+<div class="lg-body">
+
+<main class="lg-main">
+  <input type="radio" name="t1" id="t1a" class="lt lt-a" hidden checked><input type="radio" name="t1" id="t1b" class="lt lt-b" hidden>
+<div class="ltabs"><label for="t1a" class="la">Log Pesan <span class="cnt">214</span></label><label for="t1b" class="lb">Log Aktivitas <span class="cnt">18</span></label><span class="push readonly small">🔒 hanya baca · retensi 30 hari</span></div>
+  <div class="lp lp-a">
+    <div class="filters"><input type="date" class="inp" value="2026-10-23"><select class="inp"><option>Semua perangkat</option><option>Info Publik</option><option>Hotline IGD</option><option>CS Poli</option></select>
+<select class="inp"><option>Semua status</option><option>OK</option><option>Error</option><option>Cache</option></select><select class="inp"><option>Semua tool</option><option>get_jadwal_dokter</option><option>get_ketersediaan_kamar</option><option>get_info_rs</option></select><span class="wf-marker">1</span></div>
+    <div class="tblwrap"><table class="tbl"><thead><tr><th>Waktu</th><th>Perangkat</th><th>Nomor</th><th>Pesan</th><th>Tool</th><th>Status</th><th>Latency</th></tr></thead><tbody><tr><td class="mono">10:44</td><td>Info Publik</td><td class="mono muted">#a91f</td><td class="ell">Jam besuk sampai jam berapa nggih?</td><td class="mono small">get_info_rs("Jam Besuk")</td><td><span class="st ok">OK</span></td><td>1,8 dtk</td></tr><tr><td class="mono">10:42</td><td>Hotline IGD</td><td class="mono muted">#7c03</td><td class="ell">Nggih matur nuwun. Parkirnya di mana?</td><td class="mono small">get_info_rs("Alamat & Kontak")</td><td><span class="st ok">OK</span></td><td>2,0 dtk</td></tr><tr><td class="mono">10:40</td><td>Hotline IGD</td><td class="mono muted">#7c03</td><td class="ell">Bapak saya sesak nafas dari tadi pagi...</td><td class="mono small">filter darurat</td><td><span class="st ok">OK</span></td><td>0,1 dtk</td></tr><tr><td class="mono">10:38</td><td>Info Publik</td><td class="mono muted">#52be</td><td class="ell">Kamar VIP masih ada nggih?</td><td class="mono small">get_ketersediaan_kamar("VIP")</td><td><span class="st err">Error</span></td><td>5,2 dtk</td></tr><tr><td class="mono">10:30</td><td>Info Publik</td><td class="mono muted">#e410</td><td class="ell">Dokter anak hari Kamis siapa?</td><td class="mono small">get_jadwal_dokter("Anak","Kamis")</td><td><span class="st ok">OK</span></td><td>2,4 dtk</td></tr><tr><td class="mono">10:21</td><td>CS Poli</td><td class="mono muted">#19dd</td><td class="ell">Dokter mata hari Senin ada?</td><td class="mono small">get_jadwal_dokter("Mata","Senin")</td><td><span class="st warn">Cache</span></td><td>5,1 dtk</td></tr><tr><td class="mono">08:12</td><td>Info Publik</td><td class="mono muted">#c2a0</td><td class="ell">Jadwal poli gigi besok</td><td class="mono small">—</td><td><span class="st err">Error</span></td><td>0,6 dtk</td></tr></tbody></table></div>
+    <div class="pager small"><span>Menampilkan 1–7 dari 214</span><span class="push"></span><a href="#" class="btn sm ghost">‹</a><a href="#" class="btn sm">1</a><a href="#" class="btn sm ghost">2</a><a href="#" class="btn sm ghost">…</a><a href="#" class="btn sm ghost">31</a><a href="#" class="btn sm ghost">›</a><span class="wf-marker">2</span></div>
+  </div>
+  <div class="lp lp-b"><table class="tbl"><thead><tr><th>Waktu</th><th>Pengguna</th><th>Aksi</th><th>Detail</th></tr></thead><tbody><tr><td class="mono">10:43</td><td>Sari</td><td><b>Ambil alih</b></td><td>0813-****-7790 (Hotline IGD)</td></tr><tr><td class="mono">10:35</td><td>Budi</td><td><b>Ambil alih</b></td><td>0821-****-1203 (CS Poli)</td></tr><tr><td class="mono">10:15</td><td>Sari</td><td><b>Simpan Info RS</b></td><td>kb/info_rs.md — "Ubah jam besuk sore 16.00"</td></tr><tr><td class="mono">09:58</td><td>Sari</td><td><b>Login</b></td><td>dari 192.168.100.21</td></tr><tr><td class="mono">08:30</td><td>Budi</td><td><b>Login</b></td><td>dari 192.168.100.34</td></tr><tr><td class="mono">22 Okt 15:30</td><td>Budi</td><td><b>Simpan System Prompt</b></td><td>prompts/system.md — "Tambah aturan menu angka"</td></tr></tbody></table></div>
+</main>
+</div></div>
+  </div></div>
+</div>
+</body>
+</html>

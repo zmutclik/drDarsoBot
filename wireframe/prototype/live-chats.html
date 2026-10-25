@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Chats — drDarsoBot</title>
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="prototype.css">
+</head>
+<body class="px" data-mode="clean">
+<header class="px-top"><div class="px-brand">drDarsoBot<small>Admin Console</small></div><nav><a href="dashboard.html" class="">Dashboard</a><a href="live-chats.html" class="on">Live Chats</a><a href="prompt.html" class="">Prompt &amp; Info RS</a><a href="coba-bot.html" class="">Coba Bot</a><a href="perangkat.html" class="">Perangkat</a><a href="log.html" class="">Log</a><a href="pengguna.html" class="">Pengguna</a></nav>
+  <span class="px-user">Sari</span><a href="#">Ganti Password</a><a href="index.html">Logout</a></header>
+<div class="px-main">
+  <div id="frame-opt2" class="px-frame clean"><div class="browser-content">
+<div class="lc-app">
+
+<div class="lc-body">
+<section class="pane pane-list wide">
+  <div class="pane-pad row"><input class="search" type="text" placeholder="Cari nomor WA..."><button class="chip on" title="Bunyi notifikasi saat ada chat darurat">🔔 Suara</button></div>
+  <div class="scroll">
+    <div class="section-label strong">Perlu perhatian · 2 <span class="wf-marker">2</span></div>
+    <a href="#" class="conv sel">
+  <div class="conv-top"><span class="conv-num">0813-3521-7790</span><span class="conv-time">10:42</span></div>
+  <div class="conv-snip">Nggih matur nuwun. Parkirnya di mana?</div>
+  <div class="conv-meta"><span class="badge urgent">Darurat</span><span class="badge dev">Hotline IGD</span><span class="conv-wait">menunggu 2 mnt</span><span class="unread">1</span></div>
+</a><a href="#" class="conv">
+  <div class="conv-top"><span class="conv-num">0857-4410-2231</span><span class="conv-time">10:38</span></div>
+  <div class="conv-snip">Bot: Mohon maaf, data kamar sedang tidak dapat diakses...</div>
+  <div class="conv-meta"><span class="badge warn">Bot gagal</span><span class="badge dev">Info Publik</span><span class="conv-wait">menunggu 6 mnt</span></div>
+</a>
+    <div class="section-label">Ditangani operator · 2</div>
+    <a href="#" class="conv">
+  <div class="conv-top"><span class="conv-num">0896-2207-1145</span><span class="conv-time">10:36</span></div>
+  <div class="conv-snip">Baik, saya ke loket jam 7 nggih</div>
+  <div class="conv-meta"><span class="badge op">Anda</span><span class="badge dev">CS Poli</span><span class="conv-wait">menunggu 1 mnt</span><span class="unread">1</span></div>
+</a><a href="#" class="conv">
+  <div class="conv-top"><span class="conv-num">0821-6678-1203</span><span class="conv-time">10:35</span></div>
+  <div class="conv-snip">Baik bu, saya tunggu</div>
+  <div class="conv-meta"><span class="badge op">Budi</span><span class="badge dev">CS Poli</span></div>
+</a>
+    <details class="group"><summary class="section-label">Bot menangani · 14 <span class="muted">tampilkan</span></summary>
+      <a href="#" class="conv">
+  <div class="conv-top"><span class="conv-num">0812-9034-5512</span><span class="conv-time">10:30</span></div>
+  <div class="conv-snip">Bot: dr. Anita, Sp.A praktik Kamis 08.00–12.00...</div>
+  <div class="conv-meta"><span class="badge">Bot</span><span class="badge dev">Info Publik</span></div>
+</a><a href="#" class="conv">
+  <div class="conv-top"><span class="conv-num">0878-1123-4409</span><span class="conv-time">10:22</span></div>
+  <div class="conv-snip">Bot: Jam besuk pukul 11.00–13.00 dan 17.00–19.00...</div>
+  <div class="conv-meta"><span class="badge">Bot</span><span class="badge dev">Info Publik</span></div>
+</a><a href="#" class="conv">
+  <div class="conv-top"><span class="conv-num">0852-3390-7781</span><span class="conv-time">09:58</span></div>
+  <div class="conv-snip">Matur nuwun</div>
+  <div class="conv-meta"><span class="badge">Bot</span><span class="badge dev">CS Poli</span></div>
+</a>
+    </details>
+  </div>
+</section>
+<section class="pane pane-chat">
+  <input type="checkbox" class="tt" id="tt2" hidden>
+  <div class="pane-head"><b>0813-3521-7790</b><span class="badge dev">Hotline IGD</span><span class="badge urgent">Darurat</span>
+    <span class="muted small push">Kata kunci: "sesak nafas" · template IGD terkirim 10:40</span></div>
+  <div class="state-bar when-bot">Bot sedang menangani<a href="#" class="btn ghost sm push">Tandai sudah dicek</a><label for="tt2" class="btn primary sm">Ambil alih</label><span class="wf-marker">3</span></div>
+  <div class="state-bar op when-op">Anda mengambil alih · lepas otomatis dalam <b>29:41</b><label for="tt2" class="btn sm push">Kembalikan ke bot</label></div>
+  <div class="scroll msgs"><div class="msg in">Assalamualaikum, bapak saya sesak nafas dari tadi pagi, harus ke mana nggih?<div class="msg-meta">Pasien · 10:40</div></div>
+<div class="msg out"><span class="tool">filter darurat · tanpa LLM</span><br>Waalaikumsalam. Mohon maaf Bapak/Ibu, keluhan sesak nafas perlu penanganan segera. Silakan langsung ke <b>IGD 24 Jam</b> RSUD dr. Darsono (pintu masuk barat) atau hubungi Hotline IGD (0357) 881410.<div class="msg-meta">Bot · 10:40</div></div>
+<div class="msg in">Kalau pakai BPJS bisa langsung nggih? Belum ada rujukan<div class="msg-meta">Pasien · 10:41</div></div>
+<div class="msg out"><span class="tool">get_info_rs(topik: "BPJS")</span><br>Nggih, Bapak/Ibu. Untuk kondisi gawat darurat, peserta BPJS dapat langsung dilayani di IGD tanpa surat rujukan. Mohon membawa KTP dan kartu BPJS nggih.<div class="msg-meta">Bot · 10:41</div></div>
+<div class="msg in">Nggih matur nuwun. Parkirnya di mana?<div class="msg-meta">Pasien · 10:42</div></div>
+<div class="sysline when-op">Sari (Anda) mengambil alih · 10:43</div></div>
+  <div class="quick when-op"><span class="quick-label">Template:</span>
+  <button class="chip">Salam pembuka</button><button class="chip">Arahkan ke IGD</button><button class="chip">Arahkan ke admisi</button><button class="chip">Penutup</button>
+</div><div class="composer when-bot"><span class="locked">Bot sedang menangani. Ambil alih untuk membalas.</span></div>
+<div class="composer when-op"><input type="text" placeholder="Tulis balasan sebagai operator..."><span class="wf-marker">4</span><button class="btn primary">Kirim <span class="kbd">Enter</span></button></div>
+</section>
+</div></div>
+  </div></div>
+</div>
+</body>
+</html>
